@@ -2,9 +2,12 @@ a= 123 # a is a variable
 b= 456 # b is a variable 
 print(a+b) # add
 print(a*b) # mul
+print(a**b) #exponential
 print(a/b) # div
+print(a//b) #floor division
 print(a-b) #sub
 print(a%b) #modules 
+
 
 print("type of a",type(a)) #type is used for checking the data type of 'a' variable
 
