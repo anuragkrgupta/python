@@ -5,22 +5,22 @@
 
 #Default argument:
 
-# def defaultArgument(a=3, b=3): #here we pass the default value of a nd b in the argument
-#     c = (a + b)/2  
-#     print("this is the average of two numbers: " , c)
+def defaultArgument(a=3, b=3): #here we pass the default value of a nd b in the argument
+    c = (a + b)/2  
+    print("this is the average of two numbers: " , c)
 
-# defaultArgument()  #function calling
+defaultArgument()  #function calling
 
 #Keyword argument
 #here the order of the argument is not necessary... 
 # for ex:= defaultArgument(b=9 , a=33)
 
 #required argument
-# def defaultArgument(a, b=3): #here we provide only one value, it means the 'a' become the required argument, now we have to give a value to 'a' anyhow.
-#     c = (a + b)/2  
-#     print("this is the average of two numbers: " , c)
+def defaultArgument(a, b=3): #here we provide only one value, it means the 'a' become the required argument, now we have to give a value to 'a' anyhow.
+    c = (a + b)/2  
+    print("this is the average of two numbers: " , c)
 
-# defaultArgument()  
+defaultArgument()  
 
 #keyword argument
 def keyword(*numbers):  # *numbers is taking numbers as tuple. (arbitrary number of argument)
