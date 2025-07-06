@@ -1,4 +1,5 @@
 # here we are practicing about lists in python
+#lists are mutable
 
 L = [1,2,3, "anurag", True]  #we can actually add numbers, strings and boolean walues in string
 print(L)
