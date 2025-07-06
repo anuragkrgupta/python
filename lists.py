@@ -27,6 +27,8 @@ print(L[:]) #this is printing 0 to 4
 print(L[1:4]) # this is printing 1 to 4
 print(L[1:-1])  # this is printing 1 to total-1
 print(L[1:len(L)-1])  # this is printing 1 to length_of_list -1 
+
+#print(start : end : jumpIndex)  this is the formula of jumpIndex
 print(L[1:5:2])  # this is printing 1 to 5 while jumping 2 indexes , this is called jumpIndex
 
 
