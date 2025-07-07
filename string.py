@@ -87,3 +87,11 @@ print(str1.swapcase())
 # title(): The title() method capitalizes each letter of the word within the string.
 str1 = "He's name is Dan. Dan is an honest man."
 print(str1.title())
+
+#f-string
+#it replaces variable from the string
+
+name = anurag
+country = India
+
+print(f"Hey my name is {name}, I am from {country}")
