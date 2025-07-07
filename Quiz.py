@@ -4,7 +4,7 @@ age = str(input("Enter your age: "))
 points = 00
 req = str(input("Are you ready to play KBC with me (Y/N): "))
 
-if req == 'Y' or 'y':
+if req.lower() == 'Y':
     print("lets go")
     print("Here is your question:- ")
     
