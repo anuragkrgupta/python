@@ -22,7 +22,7 @@ def defaultArgument(a, b=3): #here we provide only one value, it means the 'a' b
 
 defaultArgument()  
 
-#keyword argument
+#variable length argument
 def keyword(*numbers):  # *numbers is taking numbers as tuple. (arbitrary number of argument)
     sum = 0  #initializing sum by 0
     for i in numbers: # for loop
