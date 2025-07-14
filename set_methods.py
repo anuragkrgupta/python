@@ -38,3 +38,15 @@ s2 = {4,7,2,9}
 # s1.discard(8)  # this will discard the item from the list same as remove method, if the item is not present in the list it will not through an error message
 # print(s1)
 
+# s3 = s1.pop()  # pop method used to pop any item from the list, but accessable for future use
+# print(s3)
+
+# del s1  # deleting the set
+
+# s1.clear() #clearing the items of set
+
+#check if item exsists
+# if 2 in s1:
+#     print("2 is present")
+# else:
+#     print("2 is absent")
