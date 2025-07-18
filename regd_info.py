@@ -3,10 +3,19 @@
 #question asked
 import random
 
+employee_db = {}
+
 employeeID = random.randint(100, 1000)
+
+
+
 while True:
     todo = str(input("Press 'r' for Registeration & 'e' for Enquiry: "))
     ID = employeeID
+
+    while employeeID in employee_db:
+     employeeID = random.randint(100,1000)
+
     if todo.lower() == 'r':
 
             name = str(input("Enter employee name: "))
@@ -19,8 +28,9 @@ while True:
             'role' : role,
             'employeeID' : ID
             }
-            print(ID)
+            print(ID, employee_db)
 
     else:
         empID = int(input("Enter Employee ID: "))
-        print(ID.get('name')) 
+        emp_data = employee_db.get(empID)
+        print(employee_db.get(emp_data)) 
