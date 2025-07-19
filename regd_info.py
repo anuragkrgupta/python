@@ -1,6 +1,5 @@
 #this is an employee registeration and enquiry point
 
-#question asked
 import random
 
 employee_db = {}
