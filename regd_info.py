@@ -14,10 +14,18 @@ while True:
      employeeID = random.randint(100,1000)
 
     if todo.lower() == 'r':
-
+        try:
             name = str(input("Enter employee name: "))
-            age = int(input("Enter age: "))
+            if not name.isalpha():
+                raise ValueError("Only alphabets are allowed for name input!")
+            try:
+                age = int(input("Enter age: "))
+            except ValueError :
+                print("use integer for age!")
+                continue
             role = str(input("Enter designation/role: "))
+            if not role.isalpha():
+                raise ValueError("Only alphabets are allowed for role input!")
             
             data = {
             'name' : name,
@@ -28,7 +36,10 @@ while True:
             print(ID)
             employee_db[employeeID] = data
             print("Registeration complete")
-
+        except ValueError as e:
+            print(e)
+        
+            
     elif todo.lower() == 'e':
         empID = int(input("Enter Employee ID: "))
         emp_data = employee_db.get(empID)
