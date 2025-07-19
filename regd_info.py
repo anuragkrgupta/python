@@ -4,13 +4,10 @@
 import random
 
 employee_db = {}
-
-employeeID = random.randint(100, 1000)
-
-
-
 while True:
-    todo = str(input("Press 'r' for Registeration & 'e' for Enquiry: "))
+    employeeID = random.randint(100, 1000)
+
+    todo = str(input("Press 'r' for Registeration & 'e' for Enquiry & 'q' for Quit: "))
     ID = employeeID
 
     while employeeID in employee_db:
@@ -22,15 +19,24 @@ while True:
             age = int(input("Enter age: "))
             role = str(input("Enter designation/role: "))
             
-            ID = {
+            data = {
             'name' : name,
             'age' : age,
             'role' : role,
             'employeeID' : ID
             }
-            print(ID, employee_db)
+            print(ID)
+            employee_db[employeeID] = data
+            print("Registeration complete")
 
-    else:
+    elif todo.lower() == 'e':
         empID = int(input("Enter Employee ID: "))
         emp_data = employee_db.get(empID)
-        print(employee_db.get(emp_data)) 
+        if emp_data:
+            print("Employee Data: ", emp_data)
+        else:
+            print("No Employee Found!")
+
+    else:
+        break
+        
