@@ -11,24 +11,31 @@
 import random
 import string
 
-ran_letters = random.choice(string.ascii_letters)
-
 msglen = ()
+encrypted_db = {}
+
+
 msg_input = input("Type your message here:- ")
+while True:
+    req = input("what you want to do?\n press 'e' for encryption & 'd' for decryption Or press 'q' for exit!!")
 
-req = input("what you want to do?\n press 'e' for encryption & 'd' for decryption ")
-
-if req.lower() == "e":
-    msglen = len(msg_input)
-    # print(msglen)
-    if msglen<=3:
-        reverse_s = msg_input[::-1]
-        print(reverse_s)
-    print("encrypted")
-    if msglen>3:
-        rotate = msg_input[1:] + msg_input[0]
-        # print(rotate)
-        print(f"{ran_letters} + {rotate} + {ran_letters}")
-
-else:
-    print("decrypted")
+    if req.lower() == "e":
+        ran_letters = ''.join(random.choices(string.ascii_letters, k=4))     
+        msglen = len(msg_input)
+        # print(msglen)
+        if msglen<=3:
+            reverse_s = msg_input[::-1]
+            print(reverse_s)
+        print("encrypted")
+        if msglen>3:
+            rotate = msg_input[1:] + msg_input[0]
+            # print(rotate)
+            encrypted = ran_letters + rotate + ran_letters
+            encrypted_db[msg_input] = encrypted
+            print(encrypted)
+    elif req == "d":
+        # print(encrypted)
+        
+        print("decrypted")
+    else:
+        break
