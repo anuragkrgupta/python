@@ -91,7 +91,7 @@ print(str1.title())
 #f-string
 #it replaces variable from the string
 
-name = anurag
-country = India
+# name = anurag
+# country = India
 
-print(f"Hey my name is {name}, I am from {country}")
+# print(f"Hey my name is {name}, I am from {country}")
