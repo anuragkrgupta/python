@@ -37,7 +37,20 @@ while True:  #loop for multiple inputs
             print(encrypted)
     elif req == "d":
         # print(encrypted)
+        if msglen<=3:  
+            reverse_s = msg_input[::1]  #if the input len in less then 3 simply reverse it
+            print(reverse_s)
+        if msglen>3:  
+            minus = encrypted[0:-4]  #removing last 4 random char
+            rev = minus[::-1]  #reversing the string
+            minuss = rev[0:-4] #remove last 4 random char again
+            min = minuss[::-1]  #reversing the string again
+            decrypted = min[msglen-1] + min[:-1] #msglen-1 for getting the last index and adding the the string by removing the last char
 
-        print("decrypted")
+            print(decrypted)
+
+
+        
+        # print("decrypted")
     else:
         break
