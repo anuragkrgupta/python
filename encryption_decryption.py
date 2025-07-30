@@ -48,9 +48,6 @@ while True:  #loop for multiple inputs
             decrypted = min[msglen-1] + min[:-1] #msglen-1 for getting the last index and adding the the string by removing the last char
 
             print(decrypted)
-
-
-        
         # print("decrypted")
     else:
         break
